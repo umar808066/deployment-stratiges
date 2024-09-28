@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: shruti786/todo:micro   # Version B image
+        image: nginx:latest   # Version B image
         ports:
         - containerPort: 80
