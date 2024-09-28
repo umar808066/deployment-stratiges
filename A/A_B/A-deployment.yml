@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   name: a-deployment
   labels:
-    app: my-appa/b
+    app: my-app
     version: a
 spec:
   replicas: 3   # 60% traffic (3 out of 5 total pods)
   selector:
     matchLabels:
-      app: my-appa/b
+      app: my-app
       version: a
   template:
     metadata:
       labels:
-        app: my-appa/b
+        app: my-app
         version: a
     spec:
       containers:
-      - name: my-appa/b
+      - name: my-app
         image: nginx:latest  # Version A image
         ports:
         - containerPort: 80

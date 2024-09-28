@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   name: b-deployment
   labels:
-    app: my-appa/b
+    app: my-app
     version: b
 spec:
   replicas: 2   # 40% traffic (2 out of 5 total pods)
   selector:
     matchLabels:
-      app: my-appa/b
+      app: my-app
       version: b
   template:
     metadata:
       labels:
-        app: my-appa/b
+        app: my-app
         version: b
     spec:
       containers:
-      - name: my-appa/b
+      - name: my-app
         image: shruti786/todo:micro   # Version B image
         ports:
         - containerPort: 80
